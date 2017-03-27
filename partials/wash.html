@@ -1,0 +1,68 @@
+<div class="wrapper">
+	<div>Please fill in the information below to wash your car</div>
+	<div class="itemWrapper">
+		<div class="itemLabel">Car Type</div>
+		<div class="itemInfo">
+			<select ng-model="transaction.type">
+				<option value="0">Please choose a car type</option>
+				<option ng-repeat="vehicle in vehicles" value="{{vehicle.type}}">{{vehicle.type}}</option>
+
+			</select>
+		</div>
+	</div>
+	<div class="itemWrapper">
+		<div class="itemLabel">License Plate</div>
+		<div class="itemInfo"><input type="text" ng-model="transaction.licensePlate" />
+		</div>
+	</div>
+	<div ng-if="transaction.type === 'truck'">
+		<div class="itemWrapper">
+			<div class="itemLabel">Is the truck bed muddy?</div>
+			<div class="itemInfo">
+				<select ng-model="transaction.isMuddy">
+					<option value="0">Please choose a car type</option>
+					<option value="yes">yes</option>
+					<option value="no">no</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="itemWrapper">
+			<div class="itemLabel">Is the truck down?</div>
+			<div class="itemInfo">
+				<select ng-model="transaction.isBedDown">
+					<option value="0">Please choose a car type</option>
+					<option value="yes">yes</option>
+					<option value="no">no</option>
+				</select>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="itemWrapper">
+		<div class="itemButton" ng-click="validateVehicle(transaction)">submit</div>
+	</div>
+
+
+
+	<div class="itemWrapper" ng-if="isDenied === true">
+		<div class="denied">This car with license plate {{transaction.licensePlate}} can not be washed!!!</div>
+	</div>
+
+
+	<div class="itemWrapper" ng-if="washingCar === true">
+		<div class="denied">This car with license plate {{transaction.licensePlate}} is getting washed!!!</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>

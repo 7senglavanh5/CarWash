@@ -1,0 +1,52 @@
+html, body {
+	font-family:'helvetica neue light', helvetica, arial;
+	margin:0;
+	padding:0;
+}
+
+.menu-container {
+	background:#000;
+}
+
+.menu {
+	padding:10px;
+}
+
+.menu span {
+	padding:0 10px;
+}
+
+.menu a {
+	color:#FFF;
+	text-decoration:none;
+}
+
+.wrapper {
+	padding:20px;
+}
+.itemWrapper {
+	border-bottom:1px solid #DDD;
+	margin:10px 0;
+	padding:10px 0;
+
+}
+.itemLabel {
+	display:inline-block;
+	font-weight: 700;
+	width:200px;
+}
+
+.itemInfo {
+	display:inline-block;
+	width:400px;
+}
+
+.itemButton {
+	background:#2E8AC0;
+	border-radius:3px;
+	color:#FFF;
+	cursor:pointer;
+	display:inline-block;
+	padding:5px 10px;
+
+}
